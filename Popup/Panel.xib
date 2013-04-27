@@ -93,13 +93,13 @@
 							<string key="NSFrame">{{14, 105}, {106, 32}}</string>
 							<reference key="NSSuperview" ref="290197886"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="752898308"/>
+							<reference key="NSNextKeyView" ref="331036811"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="63782830">
 								<int key="NSCellFlags">67108864</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">eject beidl</string>
+								<string key="NSContents">eject diskX</string>
 								<reference key="NSSupport" ref="614535469"/>
 								<string key="NSCellIdentifier">_NS:9</string>
 								<reference key="NSControlView" ref="570581810"/>
@@ -112,7 +112,7 @@
 							</object>
 							<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
 						</object>
-						<object class="NSButton" id="752898308">
+						<object class="NSButton" id="331036811">
 							<reference key="NSNextResponder" ref="290197886"/>
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{14, 71}, {82, 32}}</string>
@@ -121,13 +121,13 @@
 							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
-							<object class="NSButtonCell" key="NSCell" id="900065194">
+							<object class="NSButtonCell" key="NSCell" id="1037395393">
 								<int key="NSCellFlags">67108864</int>
 								<int key="NSCellFlags2">134217728</int>
 								<string key="NSContents">Quit</string>
 								<reference key="NSSupport" ref="614535469"/>
 								<string key="NSCellIdentifier">_NS:9</string>
-								<reference key="NSControlView" ref="752898308"/>
+								<reference key="NSControlView" ref="331036811"/>
 								<int key="NSButtonFlags">-2038284288</int>
 								<int key="NSButtonFlags2">129</int>
 								<string key="NSAlternateContents"/>
@@ -205,7 +205,7 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">quitApp:</string>
 						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="752898308"/>
+						<reference key="destination" ref="331036811"/>
 					</object>
 					<int key="connectionID">49</int>
 				</object>
@@ -263,7 +263,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="437242515"/>
 							<reference ref="570581810"/>
-							<reference ref="752898308"/>
+							<reference ref="331036811"/>
 						</object>
 						<reference key="parent" ref="194620731"/>
 					</object>
@@ -297,17 +297,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">47</int>
-						<reference key="object" ref="752898308"/>
+						<reference key="object" ref="331036811"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="900065194"/>
+							<reference ref="1037395393"/>
 						</object>
 						<reference key="parent" ref="290197886"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">48</int>
-						<reference key="object" ref="900065194"/>
-						<reference key="parent" ref="752898308"/>
+						<reference key="object" ref="1037395393"/>
+						<reference key="parent" ref="331036811"/>
 					</object>
 				</object>
 			</object>
