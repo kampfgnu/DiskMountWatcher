@@ -32,6 +32,7 @@
 - (id)initWithDelegate:(id<PanelControllerDelegate>)delegate;
 - (IBAction)toggleShouldBeRejected:(id)sender;
 - (IBAction)ejectDisk1:(id)sender;
+- (IBAction)quitApp:(id)sender;
 - (void)startDiskMonitoring;
 - (void)afterSystemDidWake;
 - (void)openPanel;

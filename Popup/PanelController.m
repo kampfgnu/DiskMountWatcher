@@ -8,6 +8,7 @@
 #import "DiskArbitrationPrivateFunctions.h"
 
 #define shouldBeEjectedWhenMountedKey @"shouldBeEjectedWhenMounted"
+#define diskName @"disk1"
 
 
 #define OPEN_DURATION .15
@@ -55,8 +56,6 @@
     [self registerSession];
     
     InitializeDiskArbitration();
-    
-//    [self ejectDisk:self.disk1];
 }
 
 - (BOOL)registerSession
@@ -75,7 +74,7 @@
 //    NSLog(@"diskDidAppear");
     //store in ivar
     Disk *disk = [notif object];
-    if ([disk.BSDName isEqualToString:@"disk1"]) {
+    if ([disk.BSDName isEqualToString:diskName]) {
         self.disk1 = disk;
     }
     
@@ -90,10 +89,10 @@
     //store in ivar
     Disk *disk = [notif object];
 //    NSLog(@"diskDidChange: %@", disk.BSDName);
-    if ([disk.BSDName isEqualToString:@"disk1"]) {
+    if ([disk.BSDName isEqualToString:diskName]) {
         self.disk1 = disk;
     }
-    else if ([disk.BSDName hasPrefix:@"disk1"]) {
+    else if ([disk.BSDName hasPrefix:diskName]) {
         if (self.shouldBeEjectedWhenMounted) {
             [disk unmountWithOptions:kDADiskUnmountOptionForce];
             [disk.parent eject];
@@ -123,6 +122,10 @@
 
 - (IBAction)ejectDisk1:(id)sender {
     [self ejectDisk:self.disk1];
+}
+
+- (IBAction)quitApp:(id)sender {
+    [NSApp terminate:nil];
 }
 
 - (void)ejectDisk:(Disk *)disk {
@@ -160,6 +163,8 @@
     
     NSCellStateValue buttonState = [[NSUserDefaults standardUserDefaults] boolForKey:shouldBeEjectedWhenMountedKey] ? NSOnState : NSOffState;
     _shouldBeEjectedButton.state = buttonState;
+    
+    _ejectButton.title = [NSString stringWithFormat:@"Eject %@", diskName];
 }
 
 #pragma mark - Public accessors
