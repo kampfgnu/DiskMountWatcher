@@ -140,6 +140,13 @@
     }
     [disk eject];
     
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    notification.title = @"Disable disk1 app";
+    notification.informativeText = @"tryed to eject disk";
+//    notification.soundName = NSUserNotificationDefaultSoundName;
+    
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    
 //    [disk unmountWithOptions:kDADiskUnmountOptionWhole];
 }
 
